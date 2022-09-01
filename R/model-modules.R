@@ -276,7 +276,7 @@ enw_expectation <- function(formula = ~ rw(day, .group), order = 1, data) {
         ))),
         leobs_resids = array(
           rnorm((data$t - 1) * data$g, 0, 0.01),
-          dim = c(data$t - 1, data$g)
+          dim = c(data$g, data$t - 1)
         )
       )
       if (data$exp_fncol > 0) {
